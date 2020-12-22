@@ -1,0 +1,29 @@
+{
+  "name": "test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.4.1",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "logger": "0.0.1",
+    "mongoose": "^5.11.8",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

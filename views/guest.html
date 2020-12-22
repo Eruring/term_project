@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test037.html</title>
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/guest.css">
+
+<script type="text/javascript">
+   var boardArray = new Array();
+
+   function Board(uName, uContent, minimi)
+   {
+      this.minimi=minimi;
+      this.userName=uName;
+      this.content=uContent;
+      this.writeDay=new Date();
+   }
+   
+   
+   Board.prototype.userLocalString = function()
+   {
+      return this.writeDay.getFullYear() + "년"
+          + (this.writeDay.getMonth()+1) + "월"
+          + this.writeDay.getDate() + "일"
+          + this.writeDay.getHours() + "시"
+
+   }
+
+   function main()
+   {     
+      var uName = document.getElementById("uName").value;
+      var uContent = document.getElementById("uContent").value;
+      var len = boardArray.length;
+      
+      boardArray[len] = new Board(uName, uContent, minimi);
+      
+      print(len);
+      
+      clear();  
+   }
+   
+   // 내용 출력
+   function print(idx)
+   {
+
+      
+      var tableNode = document.getElementById("bbsTable");
+      var trNode = document.createElement("tr");
+      trNode.appendChild(createTdNode((idx+1).toString()));
+      trNode.appendChild(createTdNode(boardArray[idx].userName));
+      trNode.appendChild(createTdNode(boardArray[idx].content));
+      trNode.appendChild(createTdNode(boardArray[idx].userLocalString()));
+      
+      tableNode.appendChild(trNode);
+   }
+   
+   function createTdNode(val)
+   {
+      var textNode = document.createTextNode(val);
+      var tdNode = document.createElement("td");
+      tdNode.appendChild(textNode);
+      return tdNode;
+   }
+   
+   function clear()
+   {
+	
+	   	document.getElementById("uName").value="";
+         document.getElementById("uContent").value="";
+         document.createElement("minimi")
+         document.getElementById("uName").focus();
+
+	   
+   }
+
+</script>
+
+</head>
+<body>
+   <div class="guest">
+       
+         <table width="410px" border="0" cellpadding="0" cellspacing="0" style="border: 1px;">
+            <tr>
+                <td>  
+                    <img src="/public/images/minimi.gif" id ='minimi' width="110px" height="105px" border="0" alt="" >
+                </td>
+                <td align="center">  
+                  <input type="text" id="uName" style="width: 50px; height: 100px;">
+              </td>
+                <td align="center">  
+                    <input type="text" id="uContent" style="width: 250px; height: 100px;">
+                </td>
+            </tr>
+            <tr>
+               
+        </table>
+        
+        <table border="0" width="410" cellpadding="0" cellspacing="0" align="right" style="margin-right: 20px;">
+         <td width="200" align="right">  
+            <input type="button" value="글쓰기" class="btn" onclick="main()">
+        </td>
+
+        </table>
+
+      
+         <br><br>
+
+
+        
+         <table class="tbl" id="bbsTable" style="width: 420px;" style="top: 300px;">
+            <tr align = "left">
+               <th style="width: 40px;" >번호</th>
+               <th style="width: 80px;">작성자</th>
+               <th style="width: 150px;" >내용</th>
+               <th style="width: 150px;">작성일</th>
+            </tr>
+         </table>
+
+   </div>
+</body>
+</html>

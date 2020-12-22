@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/layout.css">
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+           $("#header").load("/views/miniroom.html") //방명록 html따로 만들어서 나중에 넣을꺼   
+           $("#gg").load("/views/si.html")
+        });
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="top">
+  </div>
+
+  <div class="middle">
+
+    <div class="middle-left"> 
+      <div class="today"> TODAY 707 | TOTAL 1650037</div>
+      <div class="profile"> 
+        <table class="todayis" border="1px"width="150px" height="18px" >
+          <td align="center"><img src="/public/images/todayis.png" height="8px" alt="" > 
+          <img src="/public/images/icon.png" height="14" alt=""> 행복</td></table>
+          <div class="profile-pic">
+        <img src="/public/images/propic.jpg".jpg" width="150" alt="" ></div>
+          <div class="profile-text">  
+            <span class="sogae">
+              몽고DB를 로컬로만 하여서<p></p>
+              웹서버에서는 바로 접속이 되게 하였지만  <p></p>            
+              깃허브에는 몽고DB를 사용한 예제가 있습니다.</span>
+          <div class="profile-bottom"> <span class="HISTORY">HISTORY
+          <hr align="left" style="border: solid 0.9px black; width: 90%;">
+          <span style="font-size: 12px;"> <b>최이루</b></span><span>(♂)</span>
+           <p><span style="color:coral">kimchanho@gmail.com</span></p>
+        </span>
+          <br>
+          <br>
+            
+          
+          
+          </div>
+        </div>
+        
+      </div>
+     
+    </div>
+
+    <div class="middle-main">
+      <div class="daemoon"> 
+        ㅆrⓞl월드™</div> 
+      <div class="maintitle">
+        <div class="mintitle menu">      
+          <input type="image" id="button1" onclick="button1_click();" src="/public/images/home.png" height="25"/>
+          <input type="image" id="button1" onclick="button2_click();" src="/public/images/프로필.png" height="25"/>
+          <input type="image" id="button1" onclick="button3_click();" src="/public/images/사진첩.png" height="25"/>
+          <input type="image" id="button1" onclick="button4_click();" src="/public/images/방명록.png" height="25"/>
+              <script>
+              function button1_click() {
+                $("#header").load("/views/miniroom.html")
+              }
+              function button2_click() {
+                $("#header").load("/views/profile.html")
+              }
+              function button3_click() {
+                $("#header").load("/views/pic_page_1.html")
+              }
+              function button4_click() {
+                $("#header").load("/views/guest.html")
+              }
+              </script>
+         
+        
+  
+                  
+        </div>
+      <div class="visitor"> 
+        <div id="header"></div>
+
+        
+        </div>
+      </span>
+      
+      </div>
+      
+
+      
+     
+  </div>
+  <div class="job">
+    <embed src="/public/bgm/bgm.mp3" autostart="true" loop="true" width="150px" volume = "10"> 
+    
+  </div>
+  <img src="/public/images/deammbbang.png" alt="" style="margin-left: 770px; margin-top: 20px; width: 150px;">
+  </div>
+
+
+</div>
+</body>
+</html>
